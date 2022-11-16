@@ -2,20 +2,20 @@
 --- 
 ### Ở ví dụ này chúng ta sẽ thực hành 1 trong những ứng dụng có sức ảnh hưởng lớn của SQLi đó chính là Login Bypass.
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_12.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_12.png)
 
 
 * Và chúng ta có thể thấy được rằng tài chúng ta chưa kết nối với tài khoản của chúng ta khi ở trang web này. Click vào ‘ My Account’ ta sẽ thấy 1 cửa sổ đăng nhập hiện lên. 
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_13.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_13.png)
 
 * Trang web yêu cầu chúng ta đăng nhập và sau khi thử 1 tên tài khoản bất kì và 1 password bất kì và kiểm tra trong Burp Suite ta được kết quả trả về như sau:
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_14.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_14.png)
 
 * Kết quả trả về trong Burp Suite:
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_15.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_15.png)
 
 * Vậy thì để kiểm tra xem trang form đăng nhập này có vấn đề gì không thì ta có thể thử cách giống như ví dụ trước, đó chính là thêm 1 dấu “  ‘  ” ở phía cuối xem có lỗi gì xảy ra không. 
 
@@ -42,8 +42,8 @@ SELECT * From users where username = 'administrator'-- and password = 'haha'
 ```
 * Ta biết được rằng username của lab là **administrator** nên ta sẽ sử dụng tên đăng nhập này để bypass.
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_22.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_22.png)
 
 * Và ta có kết quả như sau: 
 
-![PIC](https://github.com/thewantedx/Picture-Security/blob/main/SQLi_23.png)
+![PIC](https://github.com/thewantedx/SQLi-PortSwigger-WriteUp/blob/main/Bin/SQLi_23.png)
